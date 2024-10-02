@@ -31,14 +31,7 @@ jobs:
       - name: Package Helm charts
         shell: bash
         run: |
-          helm package charts/istio-operator -u -d dest
-          helm package charts/keycloak -u -d dest
-          helm package charts/knative-operator -u -d dest
-          helm package charts/knative-targets -u -d dest
-          helm package charts/koby -u -d dest
-          helm package charts/tekton-operator -u -d dest
-          helm package charts/triggerflow -u -d dest
-          helm package charts/triggermesh-core -u -d dest
+          helm package charts/triggermesh -u -d dest
 
 
       - name: Push New Files
