@@ -1,11 +1,27 @@
 apiVersion: v1
 entries:
+  istio:
+  - apiVersion: v2
+    appVersion: 1.13.3
+    created: "2024-10-02T23:48:56.511813921Z"
+    dependencies:
+    - condition: istio-operator.enabled
+      name: istio-operator
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      version: 0.1.x
+    description: A Helm chart for deploying istio
+    digest: 12b7f073f0e9d6f025018a34395349c01d0360605df7cbb28e8d5440e910ab52
+    name: istio
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/istio-0.1.7.tgz
+    version: 0.1.7
   istio-operator:
   - apiVersion: v2
     appVersion: 1.13.3
-    created: "2024-10-02T23:30:59.522682156Z"
+    created: "2024-10-02T23:48:56.512125092Z"
     description: A Helm chart for deploying istio-operator
-    digest: 68a8d30cac6d62dee253f8b1b9bbf70d839c8cfe771b50302dc74b20388ddc15
+    digest: e7da65ee4995fc022e9e4e76bcd9c13ed123b98ddd20db32a7c64d1c8b78f0b1
     name: istio-operator
     type: application
     urls:
@@ -14,31 +30,63 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 9.0.3
-    created: "2024-10-02T23:30:59.523282279Z"
+    created: "2024-10-02T23:48:56.512694415Z"
     description: A Helm chart for deploying Keycloak
-    digest: 55244892a15d1848fd8b70b899aa73644d30eda4f359612f27ad059d9da20b4f
+    digest: b8f503dbbb87c8b576f7553faf2ee0559d0e3ea8235f09d655ebb633e3e2e366
     name: keycloak
     type: application
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/keycloak-0.1.6.tgz
     version: 0.1.6
+  knative-eventing:
+  - apiVersion: v2
+    appVersion: 1.4.1
+    created: "2024-10-02T23:48:56.513798155Z"
+    dependencies:
+    - condition: knative-operator.enabled
+      name: knative-operator
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      version: 0.5.x
+    description: A Helm chart for deploying knative-eventing
+    digest: 3e116b0c1ca495e2be0e9fdf28c036ff6b3b49d29dc24f0c21ff24cca3f6582c
+    name: knative-eventing
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/knative-eventing-0.5.0.tgz
+    version: 0.5.0
   knative-operator:
   - apiVersion: v2
     appVersion: v1.4.2
-    created: "2024-10-02T23:30:59.524192253Z"
+    created: "2024-10-02T23:48:56.514902076Z"
     description: A Helm chart for deploying knative-operator
-    digest: 00665250839755c7d1186c451dacbb310bcc49570925ffbc33eb71016e30ca99
+    digest: 1f6569cd3206fdcfbe1171970c918a2d6593342fc147129226119da3ad992cd7
     name: knative-operator
     type: application
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/knative-operator-0.5.0.tgz
     version: 0.5.0
+  knative-serving:
+  - apiVersion: v2
+    appVersion: 1.4.0
+    created: "2024-10-02T23:48:56.516615174Z"
+    dependencies:
+    - condition: knative-operator.enabled
+      name: knative-operator
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      version: 0.5.x
+    description: A Helm chart for deploying knative-serving
+    digest: 872f3cee2c2713e3c6b3ce4a4cb9e361027176a7025fdaabd0742b134eb8458e
+    name: knative-serving
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/knative-serving-0.5.0.tgz
+    version: 0.5.0
   knative-targets:
   - apiVersion: v2
     appVersion: v1.4.2
-    created: "2024-10-02T23:30:59.524772268Z"
+    created: "2024-10-02T23:48:56.517015561Z"
     description: A Helm chart for deploying knative-targets
-    digest: 1b515702a42e63f37d6f85dbd51a3fa5ac6c13ed3a1c725a967e842933cfbc71
+    digest: 3081e86a08a6330b1522f51169d3ba6f73a8a4c92da075c55c5cc5a0603fd38b
     name: knative-targets
     type: application
     urls:
@@ -47,31 +95,83 @@ entries:
   koby:
   - apiVersion: v2
     appVersion: v1.21.0
-    created: "2024-10-02T23:30:59.525139014Z"
+    created: "2024-10-02T23:48:56.517343954Z"
     description: A Helm chart deploying TriggerMesh Koby
-    digest: 6af444ba7c4cb090859f0aea071aaf490cf7ab84d88508a7ccead46f01f51806
+    digest: b954ad7643d7d524af1a9eead5fbb6ee42f9e29a53e3cd029a62af51139ec654
     name: koby
     type: application
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/koby-0.1.7.tgz
     version: 0.1.7
+  tekton:
+  - apiVersion: v2
+    appVersion: 0.23.0
+    created: "2024-10-02T23:48:56.517832557Z"
+    dependencies:
+    - condition: tekton-operator.enabled
+      name: tekton-operator
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      version: 0.2.x
+    description: A Helm chart for deploying tekton
+    digest: 551096f29ef1906ead81c02f011669c4ce4296aa6daf668b055c59e4ea9c3f84
+    name: tekton
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/tekton-0.2.0.tgz
+    version: 0.2.0
   tekton-operator:
   - apiVersion: v2
     appVersion: v0.23.0-2
-    created: "2024-10-02T23:30:59.525749857Z"
+    created: "2024-10-02T23:48:56.518153746Z"
     description: A Helm chart for deploying tekton-operator
-    digest: 68112b93b08433f158949ecf674672b1590621a1485713a5a6ffb25f46278fd0
+    digest: 985a20af100b15c22e01e87da73266ad722e788bff450739dbf81aa69b04fa48
     name: tekton-operator
     type: application
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/tekton-operator-0.2.0.tgz
     version: 0.2.0
+  tm-cloud:
+  - apiVersion: v2
+    appVersion: v1.10.0
+    created: "2024-10-02T23:48:56.523112045Z"
+    dependencies:
+    - condition: keycloak.enabled
+      name: keycloak
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      tags:
+      - authentication
+      version: 0.1.x
+    - condition: triggermesh.enabled
+      name: triggermesh
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      tags:
+      - triggermesh
+      - knative
+      - sources
+      - targets
+      - transformations
+      - functions
+      version: 0.8.x
+    - condition: koby.enabled
+      name: koby
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      tags:
+      - triggermesh
+      - koby
+      version: 0.1.x
+    description: A Helm chart for on-premise deployments of TriggerMesh cloud infrastructure
+    digest: d21827d920cf834036f70d015b527a27ae5ae07b4428a41ab57bd9aeed6c616a
+    name: tm-cloud
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/tm-cloud-0.6.3.tgz
+    version: 0.6.3
   triggerflow:
   - apiVersion: v2
     appVersion: v1.21.0
-    created: "2024-10-02T23:30:59.526487881Z"
+    created: "2024-10-02T23:48:56.523465845Z"
     description: A Helm chart deploying TriggerFlow
-    digest: 8dbd920d5fc9be2164ac545c6f9f1f6e68c9954afe0b2c318f781b6917b0b505
+    digest: b1519fb76d8170f0ab7ad0baa95dfd48fcbab3d629da06ca4ba268bd0c9cdf59
     name: triggerflow
     type: application
     urls:
@@ -80,7 +180,7 @@ entries:
   triggermesh:
   - apiVersion: v2
     appVersion: v1.26.0
-    created: "2024-10-02T23:30:59.529738178Z"
+    created: "2024-10-02T23:48:56.526511355Z"
     dependencies:
     - condition: triggermesh-core.enabled
       name: triggermesh-core
@@ -91,7 +191,7 @@ entries:
       - brokers
       version: 1.2.x
     description: A Helm chart deploying TriggerMesh Open Source Components
-    digest: 9e80f459e1d2851cd148009d5358767b21f1bf70d29ccbd4e554eab17eba53ff
+    digest: d9ead2bf8e2a4ee736ab9b7749920cf6f444f25f740c71f073247bd975d28aa8
     name: triggermesh
     type: application
     urls:
@@ -100,12 +200,12 @@ entries:
   triggermesh-core:
   - apiVersion: v2
     appVersion: v1.4.0
-    created: "2024-10-02T23:30:59.530178603Z"
+    created: "2024-10-02T23:48:56.526971283Z"
     description: A Helm chart deploying TriggerMesh Core Open Source Components
-    digest: d0a1843c317424debdc620225589ae16d37cf4be0beff56970dbf2ef93a95edb
+    digest: 6c4f308b6ce2d7be0b59547997d43e662e489b35b4a577877ac26b219daa2589
     name: triggermesh-core
     type: application
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/triggermesh-core-1.2.2.tgz
     version: 1.2.2
-generated: "2024-10-02T23:30:59.522220623Z"
+generated: "2024-10-02T23:48:56.511030378Z"
