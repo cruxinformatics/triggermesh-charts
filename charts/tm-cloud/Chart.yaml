@@ -16,7 +16,7 @@ dependencies:
     tags:
       - authentication
   - name: triggermesh
-    version: 0.5.x
+    version: 0.8.x
     repository: https://cruxinformatics.github.io/triggermesh-charts
     condition: triggermesh.enabled
     tags:
