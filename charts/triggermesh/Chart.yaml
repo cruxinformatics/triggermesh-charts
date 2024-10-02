@@ -11,7 +11,7 @@ appVersion: "v1.26.0"
 dependencies:
   - name: triggermesh-core
     version: 1.2.x
-    repository: https://storage.googleapis.com/triggermesh-charts
+    repository: https://cruxinformatics.github.io/triggermesh-charts
     condition: triggermesh-core.enabled
     tags:
       - triggermesh
