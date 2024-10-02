@@ -3,7 +3,7 @@ entries:
   istio-operator:
   - apiVersion: v2
     appVersion: 1.13.3
-    created: "2024-10-02T23:24:01.738385359Z"
+    created: "2024-10-02T23:30:59.522682156Z"
     description: A Helm chart for deploying istio-operator
     digest: 68a8d30cac6d62dee253f8b1b9bbf70d839c8cfe771b50302dc74b20388ddc15
     name: istio-operator
@@ -14,7 +14,7 @@ entries:
   keycloak:
   - apiVersion: v2
     appVersion: 9.0.3
-    created: "2024-10-02T23:24:01.739000125Z"
+    created: "2024-10-02T23:30:59.523282279Z"
     description: A Helm chart for deploying Keycloak
     digest: 55244892a15d1848fd8b70b899aa73644d30eda4f359612f27ad059d9da20b4f
     name: keycloak
@@ -25,7 +25,7 @@ entries:
   knative-operator:
   - apiVersion: v2
     appVersion: v1.4.2
-    created: "2024-10-02T23:24:01.739953603Z"
+    created: "2024-10-02T23:30:59.524192253Z"
     description: A Helm chart for deploying knative-operator
     digest: 00665250839755c7d1186c451dacbb310bcc49570925ffbc33eb71016e30ca99
     name: knative-operator
@@ -36,7 +36,7 @@ entries:
   knative-targets:
   - apiVersion: v2
     appVersion: v1.4.2
-    created: "2024-10-02T23:24:01.740339943Z"
+    created: "2024-10-02T23:30:59.524772268Z"
     description: A Helm chart for deploying knative-targets
     digest: 1b515702a42e63f37d6f85dbd51a3fa5ac6c13ed3a1c725a967e842933cfbc71
     name: knative-targets
@@ -47,7 +47,7 @@ entries:
   koby:
   - apiVersion: v2
     appVersion: v1.21.0
-    created: "2024-10-02T23:24:01.740912952Z"
+    created: "2024-10-02T23:30:59.525139014Z"
     description: A Helm chart deploying TriggerMesh Koby
     digest: 6af444ba7c4cb090859f0aea071aaf490cf7ab84d88508a7ccead46f01f51806
     name: koby
@@ -58,7 +58,7 @@ entries:
   tekton-operator:
   - apiVersion: v2
     appVersion: v0.23.0-2
-    created: "2024-10-02T23:24:01.74123912Z"
+    created: "2024-10-02T23:30:59.525749857Z"
     description: A Helm chart for deploying tekton-operator
     digest: 68112b93b08433f158949ecf674672b1590621a1485713a5a6ffb25f46278fd0
     name: tekton-operator
@@ -69,7 +69,7 @@ entries:
   triggerflow:
   - apiVersion: v2
     appVersion: v1.21.0
-    created: "2024-10-02T23:24:01.741610722Z"
+    created: "2024-10-02T23:30:59.526487881Z"
     description: A Helm chart deploying TriggerFlow
     digest: 8dbd920d5fc9be2164ac545c6f9f1f6e68c9954afe0b2c318f781b6917b0b505
     name: triggerflow
@@ -77,10 +77,30 @@ entries:
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/triggerflow-0.1.1.tgz
     version: 0.1.1
+  triggermesh:
+  - apiVersion: v2
+    appVersion: v1.26.0
+    created: "2024-10-02T23:30:59.529738178Z"
+    dependencies:
+    - condition: triggermesh-core.enabled
+      name: triggermesh-core
+      repository: https://cruxinformatics.github.io/triggermesh-charts
+      tags:
+      - triggermesh
+      - triggermesh-core
+      - brokers
+      version: 1.2.x
+    description: A Helm chart deploying TriggerMesh Open Source Components
+    digest: 9e80f459e1d2851cd148009d5358767b21f1bf70d29ccbd4e554eab17eba53ff
+    name: triggermesh
+    type: application
+    urls:
+    - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/triggermesh-0.8.3.tgz
+    version: 0.8.3
   triggermesh-core:
   - apiVersion: v2
     appVersion: v1.4.0
-    created: "2024-10-02T23:24:01.742057776Z"
+    created: "2024-10-02T23:30:59.530178603Z"
     description: A Helm chart deploying TriggerMesh Core Open Source Components
     digest: d0a1843c317424debdc620225589ae16d37cf4be0beff56970dbf2ef93a95edb
     name: triggermesh-core
@@ -88,4 +108,4 @@ entries:
     urls:
     - https://raw.githubusercontent.com/cruxinformatics/triggermesh-charts/gh-pages/triggermesh-core-1.2.2.tgz
     version: 1.2.2
-generated: "2024-10-02T23:24:01.737753904Z"
+generated: "2024-10-02T23:30:59.522220623Z"
