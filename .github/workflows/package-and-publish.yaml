@@ -31,11 +31,15 @@ jobs:
       - name: Package Helm charts
         shell: bash
         run: |
-          find charts/ -type f -name 'Chart.yaml' | sed -r 's|/[^/]+$||' | sort | uniq | xargs -L 1 helm dep up
-          for d in $(find * -type f -name "Chart.yaml" -exec dirname "{}" \;) ; do
-              echo "$d"
-              helm package "$d" -u -d dest
-          done
+          helm package charts/istio-operator -u -d dest
+          helm package charts/keycloak -u -d dest
+          helm package charts/knative-operator -u -d dest
+          helm package charts/knative-targets -u -d dest
+          helm package charts/koby -u -d dest
+          helm package charts/tekton-operator -u -d dest
+          helm package charts/triggerflow -u -d dest
+          helm package charts/triggermesh-core -u -d dest
+
 
       - name: Push New Files
         shell: bash
