@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   release:
@@ -31,8 +31,11 @@ jobs:
       - name: Package Helm charts
         shell: bash
         run: |
-          helm package charts/triggermesh -u -d dest
-
+          find charts/ -type f -name 'Chart.yaml' | sed -r 's|/[^/]+$||' | sort | uniq | xargs -L 1 helm dep up
+          for d in $(find * -type f -name "Chart.yaml" -exec dirname "{}" \;) ; do
+              echo "$d"
+              helm package "$d" -u -d dest
+          done
 
       - name: Push New Files
         shell: bash

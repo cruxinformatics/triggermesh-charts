@@ -1,0 +1,12 @@
+dependencies:
+- name: keycloak
+  repository: https://cruxinformatics.github.io/triggermesh-charts
+  version: 0.1.6
+- name: triggermesh
+  repository: https://cruxinformatics.github.io/triggermesh-charts
+  version: 0.8.3
+- name: koby
+  repository: https://cruxinformatics.github.io/triggermesh-charts
+  version: 0.1.7
+digest: sha256:2a24007d2c2a19f1a4be9c7449ea79a00ffde9e2fa6bc20f66f3cb6fddd39ac9
+generated: "2024-10-02T16:32:20.610421-07:00"
