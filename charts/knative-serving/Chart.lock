@@ -1,0 +1,6 @@
+dependencies:
+- name: knative-operator
+  repository: https://cruxinformatics.github.io/triggermesh-charts
+  version: 0.5.0
+digest: sha256:12bcabb52a1e92abc5851f6d6f1630b9556169bafa9b7b392bab602267fbcc4d
+generated: "2024-10-02T16:26:07.235853-07:00"

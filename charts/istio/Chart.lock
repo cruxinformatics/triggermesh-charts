@@ -1,0 +1,6 @@
+dependencies:
+- name: istio-operator
+  repository: https://cruxinformatics.github.io/triggermesh-charts
+  version: 0.1.5
+digest: sha256:0adecb14d2f884cd58d8e456bf55c1909c8d70585781acc4a09333c7e88b3b88
+generated: "2024-10-02T16:25:16.435458-07:00"
