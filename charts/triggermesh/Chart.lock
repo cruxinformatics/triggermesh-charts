@@ -1,0 +1,6 @@
+dependencies:
+- name: triggermesh-core
+  repository: https://cruxinformatics.github.io/triggermesh-charts
+  version: 1.2.2
+digest: sha256:01f30bcc441a8a6d4f84ff9bbe0f66801add2346325094e524c86b1ae39606a9
+generated: "2024-10-02T16:42:25.842691-07:00"
